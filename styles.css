@@ -387,7 +387,9 @@
 .payment p {
     padding-right: 12px;
     color: #fff;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+    padding-bottom: 7px;
+    color: #0071f3;
 }
 .payment a {
     padding-bottom: 10px;
