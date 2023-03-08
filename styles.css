@@ -647,6 +647,14 @@
         width: 310px;
         border-radius: 20px;
     }
+
+    .payment {
+        margin-top: 50px;
+        display: table;
+        text-align: center;
+        justify-content: center;
+    }
+    
 }
 /* End of Media Queries */
 
