@@ -49,6 +49,27 @@ function infoElement(merchant_orders) {
     console.log(data);
 })*/
 
+
+const Database = require('nedb');
+const express = require('express');
+const app = express();
+const fetch = require('node-fetch');
+const { response } = require('express');
+
+const database = new Database('database.db');
+database.loadDatabase();
+
+app.listen(3000, () => console.log('listening at 3000'));
+app.use(express.static('public'));
+
+async function getdata() {
+    const api_url = "https://www.blockonomics.co/api/merchant_orders?";
+    const fetch_response = await fetch(api_url);
+    const data = await fetch_response.json();
+    response.json(data);
+};
+
+
 /*const api_key = "x75ivmzZmOKE43j7m5R4gcjbJUKblQ2BLrhd5BraSic";
 const domain_name = 'https://www.blockonomics.co/api/merchant_orders'; 
 const api_url = `https://www.blockonomics.co/api/merchant_orders/${api_key}`;
@@ -59,8 +80,3 @@ async function getData() {
     console.log(data);
 }
 getData();*/
-
-const express = require('express');
-const app = express();
-app.listen(3000, () => console.log('listening at 3000'));
-app.use(express.static('public'));
