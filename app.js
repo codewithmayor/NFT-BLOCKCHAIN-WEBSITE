@@ -16,10 +16,3 @@ document.onclick = function(e){
     }
 }
 
-async function getData() {
-    const api_url = "https://www.blockonomics.co/api/merchant_orders?";
-    const fetch_response = await fetch(api_url);
-    const data = await fetch_response.json();
-    console.log(data);
-}
-getData();
