@@ -105,16 +105,25 @@
 
 /* Billboard Section */
 #billboard {
-    position: sticky;
+    
     
 }
-.billboard-container h2 {
+
+.billboard {
+    margin-bottom: 40px;
+    background-color: #fff;
+}
+
+
+.billboard h3 {
     text-align: center;
     align-items: center;
     justify-content: center;
     display: flex;
-    margin: 40px 30px;
+    margin-left: 20px;
     color: #000;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 /* End of Billboard Section */
 
