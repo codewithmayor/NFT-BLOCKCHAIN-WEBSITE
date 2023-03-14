@@ -16,17 +16,23 @@ document.onclick = function(e){
     }
 }
 
-//http call from own server
-fetch("http://localhost:3000")
+//fetch request from own server
+/*fetch("http://localhost:3000")
 .then(response => response.json())
 .then(json => console.log(json))
-.catch(error => console.log(error))
+.catch(error => console.log(error))*/
+const server = "http://localhost:3000";
 
-/*const apiUrl = "https://localhost:3000";
-async function getInfo() {
-    const response = await fetch(apiUrl);
+async function getData() {
+    const response = await fetch(server);
     const data = await response.json();
     console.log(data);
 }
-getInfo();  */  
+getData();
+
+
+
+
+
+
 

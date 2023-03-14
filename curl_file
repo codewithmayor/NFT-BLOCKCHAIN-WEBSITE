@@ -1,0 +1,2 @@
+#!/bin/bash
+curl -X GET https://www.blockonomics.co/api/merchant_orders -H "Authorization: Bearer x75ivmzZmOKE43j7m5R4gcjbJUKblQ2BLrhd5BraSic"
