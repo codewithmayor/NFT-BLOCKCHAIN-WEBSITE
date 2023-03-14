@@ -17,18 +17,29 @@ document.onclick = function(e){
 }
 
 //fetch request from own server
-/*fetch("http://localhost:3000")
-.then(response => response.json())
-.then(json => console.log(json))
-.catch(error => console.log(error))*/
+
 const server = "http://localhost:3000";
 
 async function getData() {
     const response = await fetch(server);
     const data = await response.json();
-    console.log(data);
+
+    //const size = length.data;
+    let values = [];
+
+    for (const i in data){
+        values.push(data[i].value);
+    }
+    const max_value = (Math.max.apply(Math, values) + ' USD !');
+
+    document.getElementById('highest').textContent = max_value;    
+
+    console.log(max_value);
+   
 }
 getData();
+
+setInterval(getData, 1000);
 
 
 
