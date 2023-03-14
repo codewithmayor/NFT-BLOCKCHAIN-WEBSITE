@@ -5,10 +5,12 @@ const fetch = require("node-fetch");
 const cors = require("cors");
 const https = require("https");
 
+require('dotenv').config()
+
 app.use(cors())
 
 
-const api_key = 'GLzGB4kVDEMT0DdMpB3h0UYPRSVp7lpfOsxzqp8r5u8'
+const api_key = process.env.API_KEY;
 
 const options = {
     hostname: 'www.blockonomics.co',
