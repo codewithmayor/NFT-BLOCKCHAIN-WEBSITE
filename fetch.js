@@ -17,7 +17,7 @@ const api_key = process.env.API_KEY;
 const options = {
     hostname: 'www.blockonomics.co',
     port: 443,
-    path: '/api/merchant_orders',
+    path: '/api/merchant_orders?limit=5000',
     method: 'GET',
     headers: {
       'Authorization': 'Bearer ' + api_key,
