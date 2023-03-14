@@ -1,4 +1,4 @@
-//Server-side JavaScript Code
+//Server-side JavaScript Code for API end-point request
 
 const express = require("express");
 const app = express();

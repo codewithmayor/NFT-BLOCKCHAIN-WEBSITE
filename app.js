@@ -25,13 +25,12 @@ const server = "http://localhost:3000";
 
 async function getData() {
     const response = await fetch(server);
-    //let data = await JSON.parse(response);
     const data = await response.json();
 
     let values = []; //Append 'paid_satoshi' from each JSON instance in array
 
     for (const i in data){ //Check if payment was accepted by merchant
-        if (data[i].status == 2) {
+        if (data[i].status == 2 || data[i].status == 1) {
             values.push(data[i].paid_satoshi); 
         }  
     }
