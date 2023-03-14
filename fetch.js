@@ -1,3 +1,5 @@
+//Server-side JavaScript Code
+
 const express = require("express");
 const app = express();
 const axios = require("axios");
@@ -23,7 +25,6 @@ const options = {
     }
 }
 
-
 app.get('/', (req, res, next) => {
     var request = https.get(options, (response) => {
         let result = '';
@@ -44,6 +45,6 @@ app.get('/', (req, res, next) => {
         });
 
         request.end()
-})
+});
 
 app.listen(3000, () => console.log("Application is running..."));

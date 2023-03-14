@@ -1,3 +1,5 @@
+//Client-side JavaScript Code for HTML functionality
+
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('#navbar-menu');
 
@@ -16,7 +18,8 @@ document.onclick = function(e){
     }
 }
 
-//fetch request from own server
+
+//Fetch request from server
 
 const server = "http://localhost:3000";
 
@@ -24,15 +27,13 @@ async function getData() {
     const response = await fetch(server);
     const data = await response.json();
 
-    //const size = length.data;
-    let values = [];
-
+    let values = []; //Add USD values from each JSON instance in array
     for (const i in data){
         values.push(data[i].value);
     }
-    const max_value = (Math.max.apply(Math, values) + ' USD !');
+    const max_value = (Math.max.apply(Math, values) + ' USD !'); //Get the maximum value in USD from the array
 
-    document.getElementById('highest').textContent = max_value;    
+    document.getElementById('highest').textContent = max_value; //Display maximum value on website 
 
     console.log(max_value);
    
