@@ -27,11 +27,11 @@ async function getData() {
     const response = await fetch(server);
     const data = await response.json();
 
-    let values = []; //Add USD values from each JSON instance in array
+    let values = []; //Append 'value' from each JSON instance in array
     for (const i in data){
         values.push(data[i].value);
     }
-    const max_value = (Math.max.apply(Math, values) + ' USD !'); //Get the maximum value in USD from the array
+    const max_value = (Math.max.apply(Math, values) + ' USD !'); //Get the maximum value 'in USD' from the array
 
     document.getElementById('highest').textContent = max_value; //Display maximum value on website 
 
